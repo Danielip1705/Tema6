@@ -1,7 +1,7 @@
 package herencia;
 
 public class Hora {
-
+//fdafdas
 	protected int horas;
 	protected int minutos;
 
