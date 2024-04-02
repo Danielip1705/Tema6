@@ -31,7 +31,7 @@ public class HoraExacta extends Hora {
 			super.inc();
 		}
 	}
-
+//fdasdfs
 	@Override
 	public String toString() {
 		String cad = "";
