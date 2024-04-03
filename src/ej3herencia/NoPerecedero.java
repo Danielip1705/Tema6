@@ -48,10 +48,27 @@ public class NoPerecedero extends Productos {
 		}
 	}
 
+	/**
+	 * Funcion calcular que hace lo mismo que la funcion padre
+	 * 
+	 * @param cantidad Numero entero que representa la cantidad de productos que hay
+	 * @return Numero decimal que contiene el precio calculado
+	 */
 	public double calcular(int cantidad) {
 
 		super.calcular(cantidad);
-		
+
 		return super.precio;
 	}
+
+	/**
+	 * Funcion que imprime el objeto de una manera concreta
+	 */
+	@Override
+	public String toString() {
+		String cad = super.toString();
+		cad += "Tipo: " + tipo;
+		return cad;
+	}
+
 }

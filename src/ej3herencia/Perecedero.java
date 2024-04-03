@@ -48,11 +48,11 @@ public class Perecedero extends Productos {
 		}
 	}
 
-	
 	@Override
 	/**
 	 * Funcion que descuenta el precio del producto segun cuantos dias le falta para
 	 * que caduque
+	 * 
 	 * @param
 	 */
 	public double calcular(int cantidad) {
@@ -70,10 +70,13 @@ public class Perecedero extends Productos {
 		return super.precio;
 	}
 
+	/**
+	 * Funcion que imprime el objeto de una manera concreta
+	 */
 	@Override
 	public String toString() {
 		String cad = super.toString();
-		cad = "Dias a caducar: " + diasACaducar;
+		cad += "Dias a caducar: " + diasACaducar + "\n";
 		return cad;
 	}
 
