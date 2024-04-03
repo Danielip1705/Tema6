@@ -23,7 +23,7 @@ public class HoraExacta extends Hora {
 	public HoraExacta(int hora, int minuto, int segundo) {
 		super(hora, minuto);
 
-		if (segundos > 0 && segundos < 60) {
+		if (segundos >= 0 && segundos < 60) {
 			this.segundos = segundo;
 		}
 	}
@@ -65,25 +65,14 @@ public class HoraExacta extends Hora {
 	 */
 	@Override
 	public String toString() {
-		String cad = "";
+		String cad = super.toString();
 
-		if (super.horas < 10) {
-			cad += "0" + super.horas;
-		} else {
-			cad += super.horas;
-		}
-		cad += ":";
-		if (super.minutos < 10) {
-			cad += "0" + super.minutos;
-		} else {
-			cad += super.minutos;
-		}
 		cad += ":";
 		if (segundos < 10) {
-			cad += "0" + segundos;
-		} else {
-			cad += segundos;
+			cad += "0";
 		}
+		cad += segundos;
+
 		return cad;
 	}
 }

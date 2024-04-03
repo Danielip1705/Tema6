@@ -34,12 +34,6 @@ public class Main1 {
 			// Imprimimos que no se ha podido realizar el cambios
 			System.out.println("No se ha podido cambiar los minutos");
 		}
-
-		// Cambiamos la hora
-		hora.setHora(11);
-		// Imprimimos hora
-		System.out.println("Hora después de cambiar la hora: " + hora);
-
 		// Creamos objeto horaExactale y le añadimos los parametros de entrada del
 		// constructor
 		HoraExacta horaExacta = new HoraExacta(14, 20, 59);

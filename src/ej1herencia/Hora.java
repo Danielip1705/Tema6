@@ -37,10 +37,9 @@ public class Hora {
 		if (minutos == 60) {
 			minutos = 0;
 			horas++;
-		}
-		if (horas == 24) {
-			horas = 0;
-			minutos = 0;
+			if (horas == 24) {
+				horas = 0;
+			}
 		}
 	}
 
@@ -84,16 +83,15 @@ public class Hora {
 	public String toString() {
 		String cad = "";
 		if (horas < 10) {
-			cad += "0" + horas;
-		} else {
-			cad += horas;
+			cad += "0";
 		}
+		cad += horas;
+
 		cad += ":";
 		if (minutos < 10) {
-			cad += "0" + minutos;
-		} else {
-			cad += minutos;
+			cad += "0";
 		}
+		cad += minutos;
 
 		return cad;
 	}
