@@ -1,6 +1,6 @@
 package ej2herencia;
 
-public class Oficial extends Empleado {
+public class Oficial extends Operario {
 
 	/**
 	 * Constructor con parametros
@@ -17,7 +17,7 @@ public class Oficial extends Empleado {
 	@Override
 	public String toString() {
 		String cad = "";
-		cad += super.toString() + " → Operario → Oficial";
+		cad += super.toString() + " → Oficial";
 		return cad;
 	}
 

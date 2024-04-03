@@ -40,7 +40,11 @@ public class Empleado {
 	 * @param nombre Cadena con el nombre del empleado a cambiar
 	 */
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+
+		if (nombre != null && !nombre.equals("")) {
+
+			this.nombre = nombre;
+		}
 	}
 
 	/**
