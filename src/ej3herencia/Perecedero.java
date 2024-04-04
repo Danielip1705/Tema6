@@ -1,6 +1,6 @@
 package ej3herencia;
 
-public class Perecedero extends Productos {
+public class Perecedero extends Producto {
 
 	/**
 	 * Numero entero que representa los dias a caducar
@@ -43,7 +43,7 @@ public class Perecedero extends Productos {
 	 * @param diasACaducar Numero entero que contiene los dias a caducar
 	 */
 	public void setDiasACaducar(int diasACaducar) {
-		if (diasACaducar > 0) {
+		if (diasACaducar >= 0) {
 			this.diasACaducar = diasACaducar;
 		}
 	}
@@ -57,13 +57,14 @@ public class Perecedero extends Productos {
 	 */
 	public double calcular(int cantidad) {
 
-		super.calcular(cantidad);
-
-		if (diasACaducar == 1) {
+		switch (diasACaducar) {
+		case 1:
 			super.precio /= 4;
-		} else if (diasACaducar == 2) {
+			break;
+		case 2:
 			super.precio /= 3;
-		} else if (diasACaducar == 3) {
+			break;
+		case 3:
 			super.precio /= 2;
 		}
 

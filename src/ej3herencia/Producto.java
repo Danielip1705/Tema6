@@ -1,6 +1,6 @@
 package ej3herencia;
 
-public class Productos {
+public class Producto {
 
 	/**
 	 * Cadena que contiene el nombre del producto
@@ -15,7 +15,7 @@ public class Productos {
 	/**
 	 * Constructor sin parametros
 	 */
-	public Productos() {
+	public Producto() {
 
 	}
 
@@ -25,11 +25,11 @@ public class Productos {
 	 * @param nombre Cadena que contiene el nombre del producto
 	 * @param precio Numero entero que contiene el precio del producto
 	 */
-	public Productos(String nombre, double precio) {
+	public Producto(String nombre, double precio) {
 		if (nombre != null && !nombre.equals("")) {
 			this.nombre = nombre;
 		}
-		if (precio > 0) {
+		if (precio >= 0) {
 			this.precio = precio;
 
 		}
@@ -50,7 +50,9 @@ public class Productos {
 	 * @param nombre Cadena que contiene nombre a modificar
 	 */
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		if (nombre != null && !nombre.equals("")) {
+			this.nombre = nombre;
+		}
 	}
 
 	/**
@@ -68,7 +70,9 @@ public class Productos {
 	 * @param precio Numero decimal que contiene el precio a modificar
 	 */
 	public void setPrecio(double precio) {
-		this.precio = precio;
+		if (precio >= 0) {
+			this.precio = precio;
+		}
 	}
 
 	/**

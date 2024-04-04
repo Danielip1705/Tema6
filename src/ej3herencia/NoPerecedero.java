@@ -1,11 +1,11 @@
 package ej3herencia;
 
-public class NoPerecedero extends Productos {
+public class NoPerecedero extends Producto {
 
 	/**
 	 * Cadena que contiene el tipo del producto
 	 */
-	private String tipo;
+	private String tipo="";
 
 	/**
 	 * Constructor sin parametros
@@ -46,19 +46,6 @@ public class NoPerecedero extends Productos {
 		if (tipo != null && !tipo.equals("")) {
 			this.tipo = tipo;
 		}
-	}
-
-	/**
-	 * Funcion calcular que hace lo mismo que la funcion padre
-	 * 
-	 * @param cantidad Numero entero que representa la cantidad de productos que hay
-	 * @return Numero decimal que contiene el precio calculado
-	 */
-	public double calcular(int cantidad) {
-
-		super.calcular(cantidad);
-
-		return super.precio;
 	}
 
 	/**

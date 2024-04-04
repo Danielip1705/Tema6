@@ -4,11 +4,11 @@ public class Main3 {
 
 	public static void main(String[] args) {
 		// Creamos objeto de la clase Productos con valores ya inicializados
-		Productos po = new Productos("Arroz", 1);
+		Producto po = new Producto("Arroz", 4);
 		// Creamos objeto de la clase perecedero con valores ya inicializados
-		Perecedero pe = new Perecedero("Arroz", 1, 1);
+		Perecedero pe = new Perecedero("Patata", 10, 2);
 		// Creamos objeto de la clase noPerecedero
-		NoPerecedero nPe = new NoPerecedero("Arroz", 1, "si");
+		NoPerecedero nPe = new NoPerecedero("Pizza", 21, "si");
 		// Imprimimos en pantalla el objeto producto
 		System.out.println("Objeto Producto");
 		System.out.println(po);
@@ -23,6 +23,7 @@ public class Main3 {
 		po.calcular(10);
 		pe.calcular(10);
 		nPe.calcular(10);
+		
 		// Imprimimos de nuevo los objetos con el precio calculado
 		System.out.println("---------------------------------------------------------------");
 		System.out.println("Calculado precio total de las 10 cantidades...");
