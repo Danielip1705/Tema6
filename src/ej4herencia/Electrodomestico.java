@@ -2,11 +2,11 @@ package ej4herencia;
 
 public class Electrodomestico {
 
-	enum consumoEnergetico {
-		A, B, C, D, F
+	enum ConsumoEnergetico {
+		A, B, C, D, E, F
 	}
 
-	enum colores {
+	enum Colores {
 		blanco, negro, rojo, azul, gris
 	}
 
@@ -15,9 +15,9 @@ public class Electrodomestico {
 	 */
 	protected double precioBase = 100;
 
-	protected consumoEnergetico conEnerg = consumoEnergetico.F;
+	protected ConsumoEnergetico conEnerg = ConsumoEnergetico.F;
 
-	protected colores color = colores.blanco;
+	protected Colores color = Colores.blanco;
 	/**
 	 * Numero entero que indica el peso
 	 */
@@ -54,18 +54,83 @@ public class Electrodomestico {
 	 * @param consumoElectrico Caracter que conteine el consumo electronico
 	 * @param peso             Numero entero que contiene el peso
 	 */
-	public Electrodomestico(double precioBase, String color, char conE, int peso) {
+	public Electrodomestico(double precioBase, Colores color, ConsumoEnergetico conE, int peso) {
 		if (precioBase > 0) {
 			this.precioBase = precioBase;
 		}
-		if (color != null && !color.equals("")) {
-			this.color = colores.valueOf(color);
+		if (color != null) {
+			this.color = color;
 		}
 		if (conE != null) {
-			this.conEnerg = conEnerg.valueOf(conE);
+			this.conEnerg = conE;
 		}
 		if (peso > 0) {
 			this.peso = peso;
+		}
+	}
+
+	public double getPrecioBase() {
+		return precioBase;
+	}
+
+	public ConsumoEnergetico getConEnerg() {
+		return conEnerg;
+	}
+
+	public Colores getColor() {
+		return color;
+	}
+
+	public int getPeso() {
+		return peso;
+	}
+
+	private void comprobarConsumoEnergetico(char letra) {
+		String letra1 = String.valueOf(letra);
+		for (ConsumoEnergetico consumo : ConsumoEnergetico.values()) {
+			if (letra1.toUpperCase().equals(consumo.name())) {
+				this.conEnerg = ConsumoEnergetico.valueOf(letra1);
+			}
+		}
+	}
+
+	private void comprobarColor(String color) {
+		for (Colores c : Colores.values()) {
+			if (color.equalsIgnoreCase(c.name())) {
+				this.color = Colores.valueOf(color);
+			}
+		}
+	}
+
+	public void precioFinal() {
+
+		switch (conEnerg) {
+		case A:
+			precioBase += 100;
+			break;
+		case B:
+			precioBase += 80;
+			break;
+		case C:
+			precioBase += 60;
+			break;
+		case D:
+			precioBase += 50;
+			break;
+		case E:
+			precioBase += 30;
+			break;
+		case F:
+			precioBase += 10;
+		}
+		if (peso >= 0 && peso <= 19) {
+			precioBase += 10;
+		} else if (peso >= 20 && peso <= 49) {
+			precioBase += 50;
+		} else if (peso >= 50 && peso <= 79) {
+			precioBase += 80;
+		} else if (peso > 80) {
+			precioBase += 100;
 		}
 	}
 
