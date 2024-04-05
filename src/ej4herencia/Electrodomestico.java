@@ -4,11 +4,11 @@ public class Electrodomestico {
 
 	enum ConsumoEnergetico {
 		A, B, C, D, E, F
-	}
+	};
 
 	enum Colores {
-		blanco, negro, rojo, azul, gris
-	}
+		BLANCO, NEGRO, ROJO, AZUL, GRIS
+	};
 
 	/**
 	 * Numero decimal que contiene el precio base
@@ -17,7 +17,7 @@ public class Electrodomestico {
 
 	protected ConsumoEnergetico conEnerg = ConsumoEnergetico.F;
 
-	protected Colores color = Colores.blanco;
+	protected Colores color = Colores.BLANCO;
 	/**
 	 * Numero entero que indica el peso
 	 */
@@ -54,31 +54,22 @@ public class Electrodomestico {
 	 * @param consumoElectrico Caracter que conteine el consumo electronico
 	 * @param peso             Numero entero que contiene el peso
 	 */
-	public Electrodomestico(double precioBase, Colores color, ConsumoEnergetico conE, int peso) {
-		if (precioBase > 0) {
-			this.precioBase = precioBase;
-		}
-		if (color != null) {
-			this.color = color;
-		}
-		if (conE != null) {
-			this.conEnerg = conE;
-		}
-		if (peso > 0) {
-			this.peso = peso;
-		}
+	public Electrodomestico(double precioBase, String color, char conE, int peso) {
+		this(precioBase, peso);
+		comprobarConsumoEnergetico(conE);
+		comprobarColor(color);
 	}
 
 	public double getPrecioBase() {
 		return precioBase;
 	}
 
-	public ConsumoEnergetico getConEnerg() {
-		return conEnerg;
+	public char getConEnerg() {
+		return String.valueOf(this.conEnerg).charAt(0);
 	}
 
-	public Colores getColor() {
-		return color;
+	public String getColor() {
+		return String.valueOf(this.color);
 	}
 
 	public int getPeso() {
@@ -86,19 +77,25 @@ public class Electrodomestico {
 	}
 
 	private void comprobarConsumoEnergetico(char letra) {
-		String letra1 = String.valueOf(letra);
-		for (ConsumoEnergetico consumo : ConsumoEnergetico.values()) {
-			if (letra1.toUpperCase().equals(consumo.name())) {
-				this.conEnerg = ConsumoEnergetico.valueOf(letra1);
-			}
+
+		switch (letra) {
+		case 'A', 'B', 'C', 'D', 'E', 'F':
+			this.conEnerg = ConsumoEnergetico.valueOf(String.valueOf(letra));
+			break;
+		default:
+			break;
 		}
 	}
 
 	private void comprobarColor(String color) {
-		for (Colores c : Colores.values()) {
-			if (color.equalsIgnoreCase(c.name())) {
-				this.color = Colores.valueOf(color);
-			}
+		String colorMayus = color.toUpperCase();
+
+		switch (colorMayus) {
+		case "BLANCO", "NEGRO", "ROJO", "AZUL", "GRIS":
+			this.color = Colores.valueOf(colorMayus);
+			break;
+		default:
+			break;
 		}
 	}
 

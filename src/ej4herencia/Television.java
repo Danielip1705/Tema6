@@ -16,7 +16,7 @@ public class Television extends Electrodomestico {
 		super(precio, peso);
 	}
 
-	public Television(double precio, Colores color, ConsumoEnergetico conE, int peso, int resolucion,
+	public Television(double precio, String color, char conE, int peso, int resolucion,
 			boolean sintonizador) {
 		super(precio, color, conE, peso);
 		if (resolucion > 0) {
