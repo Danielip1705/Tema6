@@ -2,10 +2,16 @@ package ej4herencia;
 
 public class Electrodomestico {
 
+	/**
+	 * Lista de enumerados de consumo energetico
+	 */
 	enum ConsumoEnergetico {
 		A, B, C, D, E, F
 	};
 
+	/**
+	 * Lista de enumerados de colores
+	 */
 	enum Colores {
 		BLANCO, NEGRO, ROJO, AZUL, GRIS
 	};
@@ -60,22 +66,48 @@ public class Electrodomestico {
 		comprobarColor(color);
 	}
 
+	/**
+	 * Get que muestra el precio base
+	 * 
+	 * @return Numero decimal
+	 */
 	public double getPrecioBase() {
 		return precioBase;
 	}
 
+	/**
+	 * Get que muestra un valor de la lista del enumerado pasado como cadena
+	 * 
+	 * @return Cadena
+	 */
 	public char getConEnerg() {
 		return String.valueOf(this.conEnerg).charAt(0);
 	}
 
+	/**
+	 * Get que muestra un valor de la lista del enumerado pasado como cadena
+	 * 
+	 * @return Cadena
+	 */
 	public String getColor() {
 		return String.valueOf(this.color);
 	}
 
+	/**
+	 * Get que muestra el peso
+	 * 
+	 * @return Numero entero
+	 */
 	public int getPeso() {
 		return peso;
 	}
 
+	/**
+	 * Funcion que comprueba si el carater del consumoEnergetico es igual al de la
+	 * lista del enumerado
+	 * 
+	 * @param letra Caracter que contiene el consumo energetico del electrodomestico
+	 */
 	private void comprobarConsumoEnergetico(char letra) {
 
 		switch (letra) {
@@ -87,6 +119,12 @@ public class Electrodomestico {
 		}
 	}
 
+	/**
+	 * Funcion que compara una cadena pasada por el usuario con la lista del
+	 * enumerado colores
+	 * 
+	 * @param color Cadena que contiene el color del electrodomestico
+	 */
 	private void comprobarColor(String color) {
 		String colorMayus = color.toUpperCase();
 
@@ -99,6 +137,10 @@ public class Electrodomestico {
 		}
 	}
 
+	/**
+	 * Funcion que aumenta el precio segun el contenido del peso y del consumo
+	 * energetico
+	 */
 	public void precioFinal() {
 
 		switch (conEnerg) {
@@ -129,6 +171,19 @@ public class Electrodomestico {
 		} else if (peso > 80) {
 			precioBase += 100;
 		}
+	}
+
+	/**
+	 * Funcion que imprime el objeto de esta clase de una forma concreta
+	 */
+	@Override
+	public String toString() {
+		String cad = "";
+		cad += "Precio: " + this.precioBase + "\n";
+		cad += "Consumo Energetico: " + this.conEnerg + "\n";
+		cad += "Color: " + this.color + "\n";
+		cad += "Peso: " + this.peso + "\n";
+		return cad;
 	}
 
 }
