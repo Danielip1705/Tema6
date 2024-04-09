@@ -32,11 +32,11 @@ public class Main {
 			// Si el valor no es nulo realizara lo siguiente
 			if (elect != null) {
 
-				precioBase(elect);
-
 				// Valor llamara a la funcion precioFinal para calcular el precio
 				elect.precioFinal();
 
+				precioBase(elect);
+				
 				// Guardamos la suma de todos los precios en la variable sumaPrecio
 				sumaPrecio += elect.getPrecioBase();
 

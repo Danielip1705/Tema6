@@ -109,10 +109,10 @@ public class Electrodomestico {
 	 * @param letra Caracter que contiene el consumo energetico del electrodomestico
 	 */
 	private void comprobarConsumoEnergetico(char letra) {
-
-		switch (letra) {
+		char caracterMinus= Character.toUpperCase(letra);
+		switch (caracterMinus) {
 		case 'A', 'B', 'C', 'D', 'E', 'F':
-			this.conEnerg = ConsumoEnergetico.valueOf(String.valueOf(letra));
+			this.conEnerg = ConsumoEnergetico.valueOf(String.valueOf(caracterMinus));
 			break;
 		default:
 			break;
