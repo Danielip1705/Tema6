@@ -52,23 +52,36 @@ public class Rectangulo extends Poligono {
 			this.lado1 = lado1;
 		}
 	}
-
+	/**
+	 * Get que muestra el 2º lado
+	 * @return
+	 */
 	public double getLado2() {
 		return lado2;
 	}
 
+	/**
+	 * Set que modifica el 2 lado
+	 * @param lado2 Numero decimal que contiene el lado a modificar
+	 */
 	public void setLado2(double lado2) {
 		if (lado2 > 0) {
 			this.lado2 = lado2;
 		}
 	}
 
+	/**
+	 * Funcion que calcula el area del rectangulo
+	 */
 	@Override
 	public double area() {
 
 		return (lado1 * lado2) / 2;
 	}
 
+	/**
+	 * Funcion que imprime el objeto de la clase de una forma concreta
+	 */
 	@Override
 	public String toString() {
 		String cad =super.toString();
