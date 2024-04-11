@@ -30,7 +30,7 @@ public class Rectangulo extends Poligono {
 		if (lado1 > 0) {
 			this.lado1 = lado1;
 		}
-		if (lado2 > 0) {
+		if (lado2 > 0&&lado1!=lado1) {
 			this.lado2 = lado2;
 		}
 	}
@@ -65,7 +65,7 @@ public class Rectangulo extends Poligono {
 	 * @param lado2 Numero decimal que contiene el lado a modificar
 	 */
 	public void setLado2(double lado2) {
-		if (lado2 > 0) {
+		if (lado2 > 0&&lado1!=lado1) {
 			this.lado2 = lado2;
 		}
 	}
