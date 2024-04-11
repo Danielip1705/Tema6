@@ -13,7 +13,10 @@ public abstract class Poligono {
 	 *                    la figura
 	 */
 	public Poligono(int numeroLados) {
-		this.numeroLados = numeroLados;
+		if(numeroLados> 2) {
+			this.numeroLados = numeroLados;	
+		}
+		
 	}
 	
 	/**

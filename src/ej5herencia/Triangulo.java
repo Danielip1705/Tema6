@@ -20,14 +20,14 @@ public class Triangulo extends Poligono {
 	 * @param numeroLados Numero entero que contiene el numero de lados
 	 */
 	public Triangulo(int numeroLados) {
-		super(numeroLados);
+		super(3);
 	}
 
 	/**
 	 * Constructor con todos los parametros
 	 */
-	public Triangulo(int numeroLados, double lado1, double lado2, double lado3) {
-		super(numeroLados);
+	public Triangulo(double lado1, double lado2, double lado3) {
+		super(4);
 		if (lado1 > 0) {
 			this.lado1 = lado1;
 		}

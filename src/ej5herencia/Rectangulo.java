@@ -16,7 +16,7 @@ public class Rectangulo extends Poligono {
 	 * @param numeroLados Numero entero que contiene el numero de lados de la figura
 	 */
 	public Rectangulo (int numeroLados) {
-		super(numeroLados);
+		super(4);
 	}
 
 	/**
@@ -25,12 +25,12 @@ public class Rectangulo extends Poligono {
 	 * @param lado1 Numero decimal que contiene la medida del 1º lado
 	 * @param lado2 Numero decimal que contiene la medidaa del 2º lado
 	 */
-	public Rectangulo(int numeroLados, double lado1, double lado2) {
-		super(numeroLados);
+	public Rectangulo(double lado1, double lado2) {
+		super(4);
 		if (lado1 > 0) {
 			this.lado1 = lado1;
 		}
-		if (lado2 > 0&&lado1!=lado1) {
+		if (lado2 > 0&&lado2!=lado1) {
 			this.lado2 = lado2;
 		}
 	}
@@ -65,7 +65,7 @@ public class Rectangulo extends Poligono {
 	 * @param lado2 Numero decimal que contiene el lado a modificar
 	 */
 	public void setLado2(double lado2) {
-		if (lado2 > 0&&lado1!=lado1) {
+		if (lado2 > 0&&lado2!=lado1) {
 			this.lado2 = lado2;
 		}
 	}
@@ -76,7 +76,7 @@ public class Rectangulo extends Poligono {
 	@Override
 	public double area() {
 
-		return (lado1 * lado2) / 2;
+		return lado1 * lado2;
 	}
 
 	/**
@@ -85,6 +85,7 @@ public class Rectangulo extends Poligono {
 	@Override
 	public String toString() {
 		String cad =super.toString();
+		cad+= "Rectangulo:\n";
 		cad+="Largo: " + lado1+"\n";
 		cad+="Ancho: " + lado2+"\n";
 		cad+="Area: " + area();

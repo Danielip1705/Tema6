@@ -35,7 +35,7 @@ public class Main {
 				System.out.println("Inserte la base");
 				lado3 = sc.nextDouble();
 				// Creamos objeto triangulo y lo inicializamos
-				Triangulo tri = new Triangulo(3, lado1, lado2, lado3);
+				Triangulo tri = new Triangulo(lado1, lado2, lado3);
 				// añadimos el objeto en la funcion añadirArray
 				añadirArray(tri);
 				// Rompemos caso 1
@@ -49,7 +49,7 @@ public class Main {
 				System.out.println("Inserte el 2º lado");
 				lado2 = sc.nextDouble();
 				// Creamos objeto rectangulo y lo inicializamos
-				Rectangulo rec = new Rectangulo(2, lado1, lado2);
+				Rectangulo rec = new Rectangulo(lado1, lado2);
 				// Llamamos la funcion añadirArray con el objeto
 				añadirArray(rec);
 				// Rompemos caso 2
