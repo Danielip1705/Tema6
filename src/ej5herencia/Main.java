@@ -37,7 +37,7 @@ public class Main {
 				// Creamos objeto triangulo y lo inicializamos
 				Triangulo tri = new Triangulo(lado1, lado2, lado3);
 				// añadimos el objeto en la funcion añadirArray
-				añadirArray(tri);
+				ArrayPoligono.añadirArray(tri);
 				// Rompemos caso 1
 				break;
 			// case 2
@@ -51,12 +51,12 @@ public class Main {
 				// Creamos objeto rectangulo y lo inicializamos
 				Rectangulo rec = new Rectangulo(lado1, lado2);
 				// Llamamos la funcion añadirArray con el objeto
-				añadirArray(rec);
+				ArrayPoligono.añadirArray(rec);
 				// Rompemos caso 2
 				break;
 			case 3:
 				// Llamamos la funcion imprimirArray
-				imprimirArray();
+				ArrayPoligono.imprimirArray();
 				// Rompemos caso 3
 				break;
 			// Y si no es ninguno de los caso anteriores
@@ -87,31 +87,6 @@ public class Main {
 		return ops;
 	}
 
-	/**
-	 * Funcion que añade un objeto al array
-	 * 
-	 * @param pol Objeto de la clase padre o de las hijas
-	 */
-	public static void añadirArray(Poligono pol) {
-		int i = 0;
-		while (i < lista.length && lista[i] != null) {
-			i++;
-		}
-
-		if (i < lista.length) {
-			lista[i] = pol;
-		}
-	}
-
-	/**
-	 * Funcion que imprime el array
-	 */
-	public static void imprimirArray() {
-		for (Poligono valor : lista) {
-			if (valor != null) {
-				System.out.println(valor);
-			}
-		}
-	}
+	
 
 }
