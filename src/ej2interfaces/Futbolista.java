@@ -44,26 +44,36 @@ public class Futbolista implements Comparable<Futbolista> {
 		}
 	}
 
+	/**
+	 * Funcion que compara si hay jugadores con el mismo numero de camisa y mismo
+	 * nombre
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		boolean igual = false;
 		Futbolista fut = (Futbolista) obj;
-		if (this.numCamisa == fut.numCamisa && this.nombre.equals(nombre)) {
+		if (this.numCamisa == fut.numCamisa && this.nombre.equals(fut.nombre)) {
 			igual = true;
 		}
 		return igual;
 	}
 
+	/**
+	 * Funcion que imprime el objeto de una manera concreta
+	 */
 	@Override
 	public String toString() {
 		String cad = "";
-		cad +="Numero de camisa: " + this.numCamisa+"\n";
-		cad+="Nombre: " + this.nombre + "\n";
-		cad+= "Edad: "+this.edad+"\n";
-		cad+= "Numero de goles "+this.numGoles+"\n";
+		cad += "Numero de camisa: " + this.numCamisa + "\n";
+		cad += "Nombre: " + this.nombre + "\n";
+		cad += "Edad: " + this.edad + "\n";
+		cad += "Numero de goles " + this.numGoles + "\n";
 		return cad;
 	}
 
+	/**
+	 * Funcion que compara las camisas de los jugadores
+	 */
 	@Override
 	public int compareTo(Futbolista o) {
 		int res = 0;
@@ -71,8 +81,8 @@ public class Futbolista implements Comparable<Futbolista> {
 			res = -1;
 		} else if (this.numCamisa > o.numCamisa) {
 			res = 1;
-		} else if(this.numCamisa==o.numCamisa) {
-			
+		} else if (this.numCamisa == o.numCamisa) {
+
 		}
 		return res;
 	}
