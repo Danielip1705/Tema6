@@ -26,6 +26,8 @@ public class Main3 {
 		per2.vacunar();
 		// Hacemos que el objeto gato se vacune
 		gat2.vacunar();
+		per1.sacarPaseo();
+		per2.sacarPaseo();
 
 		// Llamamos a la funcion hacerCaso
 		if (gat1.hacerCaso()) {

@@ -37,25 +37,9 @@ public class Perro extends AnimalDomestico {
 	}
 
 	/**
-	 * Funcion que indica que perro ha comido
-	 */
-	@Override
-	public void comer() {
-		System.out.println("El perro llamado " + nombre + " esta comiendo");
-	}
-
-	/**
 	 * Funcion que indica que perro se ha sacado ha pasear
 	 */
 	void sacarPaseo() {
-		System.out.println("Has sacado a " + nombre + "a pasear");
-	}
-
-	/**
-	 * Funcion que indica que perro ha sido vacunado
-	 */
-	@Override
-	void vacunar() {
-		System.out.println("El perro llamado " + nombre + " a sido vacunado");
+		System.out.println("Has sacado a " + nombre + " a pasear");
 	}
 }

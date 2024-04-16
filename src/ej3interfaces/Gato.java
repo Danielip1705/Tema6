@@ -36,21 +36,6 @@ public class Gato extends AnimalDomestico {
 		return caso;
 	}
 
-	/**
-	 * Funcion que indica que gato se ha vacunado
-	 */
-	@Override
-	void vacunar() {
-		System.out.println("El gato llamado " + nombre + " a sido vacunado");
-	}
-
-	/**
-	 * Funcion que indica que gato esta comiendo
-	 */
-	@Override
-	public void comer() {
-		System.out.println("El gato llamado " + nombre + " esta comiendo");
-	}
 
 	/**
 	 * Funcion que indica que gato ha solado una bola de pelo

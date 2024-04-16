@@ -46,7 +46,9 @@ public abstract class  AnimalDomestico implements Animal {
 	/**
 	 * Funcion que indica la vacuna
 	 */
-	abstract void vacunar();
+	 void vacunar() {
+		 System.out.println("Ya esta vacunado");
+	 }
 
 	/**
 	 * Funcion abstracta que indica quien haceCaso en las clases hijas
@@ -59,15 +61,15 @@ public abstract class  AnimalDomestico implements Animal {
 	 */
 	@Override
 	public void comer() {
-
-	}
+		System.out.println("ÑAM ÑAM ÑAAAAAM");	
+		}
 
 	/**
 	 * Funcion dormir
 	 */
 	@Override
 	public void dormir() {
-
+		System.out.println("ZzZzZ");
 	}
 
 	/**
