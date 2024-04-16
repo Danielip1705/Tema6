@@ -19,7 +19,7 @@ public class Gato extends AnimalDomestico {
 	 */
 	@Override
 	public void hacerRuido() {
-		System.out.println("El gato llamado " + nombre + "dice: MIAU MIAU");
+		System.out.println("El gato llamado " + nombre + " dice: MIAU MIAU");
 
 	}
 

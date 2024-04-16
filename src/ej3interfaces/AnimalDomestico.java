@@ -1,6 +1,6 @@
 package ej3interfaces;
 
-public class AnimalDomestico implements Animal {
+public abstract class  AnimalDomestico implements Animal {
 
 	/**
 	 * Cadena que contiene el nombre del animal
@@ -46,18 +46,13 @@ public class AnimalDomestico implements Animal {
 	/**
 	 * Funcion que indica la vacuna
 	 */
-	void vacunar() {
-
-	}
+	abstract void vacunar();
 
 	/**
-	 * Funcion que indica quien haceCaso
+	 * Funcion abstracta que indica quien haceCaso en las clases hijas
 	 * @return true por defecto
 	 */
-	boolean hacerCaso() {
-
-		return true;
-	}
+	abstract boolean hacerCaso();
 
 	/**
 	 * Funcion comer
@@ -76,12 +71,9 @@ public class AnimalDomestico implements Animal {
 	}
 
 	/**
-	 * Funcion hacerRuido
+	 * Funcion abstracta para hacer ruido en las clases hijas
 	 */
 	@Override
-	public void hacerRuido() {
-		// TODO Auto-generated method stub
-
-	}
+	abstract public void hacerRuido();
 
 }

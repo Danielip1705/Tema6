@@ -22,6 +22,11 @@ public class Main3 {
 		// Hacemos que el objeto gato haga ruida
 		gat1.hacerRuido();
 
+		// HAcemos que el objeto perro se vacune
+		per2.vacunar();
+		// Hacemos que el objeto gato se vacune
+		gat2.vacunar();
+
 		// Llamamos a la funcion hacerCaso
 		if (gat1.hacerCaso()) {
 
