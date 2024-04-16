@@ -52,7 +52,8 @@ public class Futbolista implements Comparable<Futbolista> {
 	public boolean equals(Object obj) {
 		boolean igual = false;
 		Futbolista fut = (Futbolista) obj;
-		if (this.numCamisa == fut.numCamisa && this.nombre.equals(fut.nombre)) {
+		if (this.numCamisa == fut.numCamisa && 
+				this.nombre.equals(fut.nombre)) {
 			igual = true;
 		}
 		return igual;
@@ -81,8 +82,8 @@ public class Futbolista implements Comparable<Futbolista> {
 			res = -1;
 		} else if (this.numCamisa > o.numCamisa) {
 			res = 1;
-		} else if (this.numCamisa == o.numCamisa) {
-
+		} else {
+			res = this.nombre.compareTo(o.nombre);
 		}
 		return res;
 	}

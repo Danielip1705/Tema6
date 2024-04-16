@@ -8,7 +8,7 @@ public class Socio implements Comparable<Socio> {
 	/**
 	 * Cadena que indica el nombre del socio
 	 */
-	private String nombre;
+	private String nombre="";
 	/**
 	 * Numero entero que indica la edad del socio
 	 */
