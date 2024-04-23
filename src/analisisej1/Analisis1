@@ -11,10 +11,10 @@ vehiculo abstract Padre
 
 + Parar(): void
 + Arrancar():void
-+ SubirMarcha():voivoidd
++ SubirMarcha():void
 + BajarMarcha():void
 - Acelerar():
-- Desacelerar():
+- frenar():
 + cruzaGato():
 ------------------------
 turismos extents vehiculo
