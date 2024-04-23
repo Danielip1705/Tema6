@@ -1,0 +1,35 @@
+vehiculo abstract Padre
+- marca: String
+- Modelo: String 
+- Color: String 
+- Matricula: String
+- motor: boolean (False)
+- marcha: int (0)
+- Velocidad: double (0.0)
++ Vehiculo(Marca,modelo,color,matricula) constructor
+
+
++ Parar(): void
++ Arrancar():void
++ SubirMarcha():voivoidd
++ BajarMarcha():void
+- Acelerar():
+- Desacelerar():
++ cruzaGato():
+------------------------
+turismos extents vehiculo
+- Plazas: int
+- tipoUso : enum
+Heredados:
+	
+----------------------------------
+Camiones extents vehiculo
+- PesoMax: int
+- mercPeligrosa: boolean
+Heredado:
+	
+----------------------------
+Motocicletas extents vehiculo
+- Cilindrada: int 
+---------------------------
++ requiereCarnet() : boolean
