@@ -1,0 +1,17 @@
+Contacto 
++ nombre: String
++ telefono: String o int?
+
+metodos
+-------------------
+Contacto(nombre,telefono)
+equals()
+getNombre()
+getTelefono()
+-----------------------------
+Personas extents Contacto
+- Fecha: String
+
+-----------------------------------
+Empresas extents Contacto
+- pagWeb: String

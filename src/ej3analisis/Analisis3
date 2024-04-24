@@ -1,2 +1,22 @@
 CuentaBancaria
-numeroCuenta: int 
+- numeroCuenta: int 
+- saldo: double
+- titulares: String[]
+
++ getNumeroCuenta()
++ getSaldo()
++ setSaldo(double saldo)
++ ingresar()
++ retirar()
++ añadir()
++ borrar()
+
+CuentaAhorro extents
+cuotaMantenimiento: int
+interesAnual: final double
+
+nuevoSaldo()
+
+CuentaCorriente extents CuentaBancaria
+porcentajeCobrado: double
+numTransacciones: int
