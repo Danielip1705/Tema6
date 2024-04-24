@@ -9,17 +9,22 @@ vehiculo abstract Padre
 + Vehiculo(Marca,modelo,color,matricula) constructor
 
 
+Metodos
+------------------------------
 + Parar(): void
 + Arrancar():void
-+ SubirMarcha():void
-+ BajarMarcha():void
-- Acelerar():
-- frenar():
+- SubirMarcha():void
+- BajarMarcha():void
++ Acelerar(double velocidad): void
++ frenar(double velocidad): void
 + cruzaGato():
++setMarcha(int marcha)
++setMotor(boolean motorEncendido)
 ------------------------
-turismos extents vehiculo
+Turismo extents vehiculo
+	enum Tipo{PARTICULAR,PROFESIONAL};
 - Plazas: int
-- tipoUso : enum
+- tipoUso : Tipo
 Heredados:
 	
 ----------------------------------

@@ -1,0 +1,38 @@
+Ficha abstract
+- ID: int
+- titulo: String
+- prestado: int
+
++ Ficha(id,titulo,prestado)
+getId()
+getTitulo()
+setPrestado(int prestado)
+getPrestado()
+tiempoPrestamo(): abstract int 
+---------------------------
+Libro extents Ficha
+- Autor: String
+- Editorial: String
++ getAutor() : String
++ getEditorial(): String
+Heredado:
++ tiempoPrestamo()
+---------------------------
+Revista extents Ficha
+- Descripcion: String
+- añoPublicacion: int 
++ getDescripcion(): String
++ getAñoPublicacion(): String
+Heredado:
++ tiempoPrestamo()
+---------------------------
+DVD extents Ficha
+   enum Tipo {PELICULA,DOCUMENTAL,SERIE}
+- Director: String
+- año: String
+- tipoDvd: Tipo
++ getDirector(): String
++ getAño(): String
++ getTipoDvd(): String
+Heredado:
++ tiempoPrestamo()
