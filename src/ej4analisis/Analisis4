@@ -1,22 +1,24 @@
 Contacto 
 + nombre: String
-+ telefono: String o int?
+- telefono: String o int?
 
 metodos
 -------------------
 Contacto(nombre,telefono)
-equals()
-getNombre()
-getTelefono()
++ equals(Object o): boolean (@Override)
++ getNombre()
++ getTelefono()
 -----------------------------
 Persona extents Contacto
-- cumpleaños: String
+- cumpleaños: String (dd/MM/yyyy)
 Persona(Cumpleaños)
 super(nombre,telefono)
 
++ getCumpleaños()
 -----------------------------------
 Empresa extents Contacto
 - pagWeb: String
 
 Empresa(Pagweb)
 super(nombre,telefono)
+
