@@ -9,9 +9,14 @@ equals()
 getNombre()
 getTelefono()
 -----------------------------
-Personas extents Contacto
-- Fecha: String
+Persona extents Contacto
+- cumpleaños: String
+Persona(Cumpleaños)
+super(nombre,telefono)
 
 -----------------------------------
-Empresas extents Contacto
+Empresa extents Contacto
 - pagWeb: String
+
+Empresa(Pagweb)
+super(nombre,telefono)

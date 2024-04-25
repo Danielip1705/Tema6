@@ -1,22 +1,43 @@
 CuentaBancaria
-- numeroCuenta: int 
+- numeroCuenta: String
 - saldo: double
-- titulares: String[]
+- titulares: Titular[3]
 
++CuentaBancaria(numeroCuenta,saldo,titular)
 + getNumeroCuenta()
 + getSaldo()
 + setSaldo(double saldo)
-+ ingresar()
-+ retirar()
-+ añadir()
-+ borrar()
++ ingresar(double cantidad): boolean
++ retirar(double cantidad): boolean
++ añadir(Titulares tit) : boolean
++ borrar(Titulares tit) : boolean
+---------------------------------------
+Titular
+- dni: String
+- nombre: String
+- Apellidos : String
+- Telefono: String
 
-CuentaAhorro extents
+
++equals (Object O) : boolean (@override)
+-----------------------------------------
+CuentaAhorro extents CuentaBancaria
 cuotaMantenimiento: int
 interesAnual: final double
-
-nuevoSaldo()
-
+CuentaAhorro(numCuenta,saldo,titular,mantenimiento,interes)
++ aplicaInteres()
++ aplicarMantenimiento()
+-----------------------------------------
 CuentaCorriente extents CuentaBancaria
-porcentajeCobrado: double
-numTransacciones: int
+- transacciones: List<Transaccion>
+CuentaCorriente(numCuenta,saldo,titular)
+
+-----------------------------------------
+Transacción
+enum{BIZUM,RECIBOS,TRANSFERENCIAS,IMPUESTOS}
+- procantaje:double
+- dia: String
+- mes: String
+- año: String
+- Concepto: double
+Transaccion(porcentaje,dia,mes,año,concepto)
